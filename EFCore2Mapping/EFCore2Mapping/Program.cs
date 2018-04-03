@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EFCore2Mapping
 {
@@ -6,7 +8,38 @@ namespace EFCore2Mapping
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            List<Student> ExistingStudents = new List<Student>();
+
+            Student student = new Student
+            {
+                StudentID = 1,
+                FirstName = "Teerth",
+                LastName = "Vadgama",
+            };
+            student.AssignStandard("5");
+            student.AssignDivision("G");
+
+            using (StudentContext studentConext = new StudentContext())
+            {
+                ///Adding a new Student;
+                studentConext.Student.Add(student);
+                studentConext.SaveChanges();
+
+
+                ///Retriviting newly added student
+                ExistingStudents = studentConext.Student.ToList();
+                
+            }
+
+            foreach(Student s in ExistingStudents)
+            {
+                Console.WriteLine($"Student Id: {s.StudentID}");
+                Console.WriteLine($"First Name: {s.FirstName}");
+                Console.WriteLine($"Last Name:{s.LastName}");
+                Console.WriteLine($"Standard:{s.GetStandard()}");
+                Console.WriteLine($"Division:{s.GetDivision()}");
+            }
         }
     }
 }
