@@ -3,12 +3,14 @@
     public class Student
     {
 
-        private string _standard;
-        private string _division;
-
         public int StudentID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+
+        private string _standard;
+        private string _division;
+
 
         public void AssignStandard(string standard)
         {
