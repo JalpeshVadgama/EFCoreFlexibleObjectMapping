@@ -13,12 +13,11 @@ namespace EFCore2Mapping
 
             Student student = new Student
             {
-                StudentId = 1,
                 FirstName = "Teerth",
                 LastName = "Vadgama",
             };
             student.AssignStandard("5");
-            student.AssignDivision("G");
+            student.AssignDivision("A");
 
             using (StudentContext studentConext = new StudentContext())
             {

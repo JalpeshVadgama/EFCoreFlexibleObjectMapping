@@ -7,7 +7,7 @@ namespace EFCore2Mapping
         public DbSet<Student> Student { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=Test;Initial Catalog=Student;User ID=sa;Password=Jalpesh@123");
+            optionsBuilder.UseSqlServer("Data Source=Fss1;Initial Catalog=Student;User ID=sa;Password=Jalpesh@123");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
