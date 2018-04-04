@@ -13,7 +13,7 @@ namespace EFCore2Mapping
 
             Student student = new Student
             {
-                StudentID = 1,
+                StudentId = 1,
                 FirstName = "Teerth",
                 LastName = "Vadgama",
             };
@@ -34,7 +34,7 @@ namespace EFCore2Mapping
 
             foreach(Student s in ExistingStudents)
             {
-                Console.WriteLine($"Student Id: {s.StudentID}");
+                Console.WriteLine($"Student Id: {s.StudentId}");
                 Console.WriteLine($"First Name: {s.FirstName}");
                 Console.WriteLine($"Last Name:{s.LastName}");
                 Console.WriteLine($"Standard:{s.GetStandard()}");
