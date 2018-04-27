@@ -39,6 +39,7 @@ namespace EFCore2Mapping
                 Console.WriteLine($"Standard:{s.GetStandard()}");
                 Console.WriteLine($"Division:{s.GetDivision()}");
             }
+            Console.ReadLine();
         }
     }
 }
