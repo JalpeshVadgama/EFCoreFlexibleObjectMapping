@@ -13,8 +13,8 @@ namespace EFCore2Mapping
 
             Student student = new Student
             {
-                FirstName = "Teerth",
-                LastName = "Vadgama",
+                FirstName = "Joe",
+                LastName = "Tailor",
             };
             student.AssignStandard("5");
             student.AssignDivision("A");
